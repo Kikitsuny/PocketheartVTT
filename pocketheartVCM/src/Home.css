@@ -1,0 +1,271 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.home-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  width: 100vw;
+  padding: 40px 20px 80px 20px;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+/* --- TARJETA DE INICIO (Mismo estilo que las Fichas) --- */
+.home-card {
+  background: var(--bg-ficha);
+  border: 3px solid var(--color-primario);
+  border-radius: 10px;
+  box-shadow: 0px 8px 32px rgba(var(--color-sombras-rgba));
+  color: var(--texto-oscuro);
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.home-card h1 {
+  color: var(--color-primario);
+  font-size: 3rem;
+  margin: 0 0 10px 0;
+text-shadow: 0px 8px 32px rgba(var(--color-sombras-rgba));
+}
+
+.home-card p {
+  color: var(--texto-oscuro);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+
+/* --- FORMULARIO Y CONTROLES --- */
+.form-sala {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-home {
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 6px;
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  outline: none;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.input-home:focus {
+  background: var(--bg-ficha-claro);
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 8px rgba(var(--color-secundario-rgb), 0.5);
+}
+
+.input-home::placeholder {
+  color: var(--texto-gris);
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.btn-home {
+  background: var(--color-primario);
+  border: none;
+  border-radius: 6px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-home:hover {
+  background: var(--color-secundario);
+}
+
+.btn-home:active {
+  transform: scale(0.98);
+}
+
+/* --- BOTÓN DE CHANGELOG SECUNDARIO --- */
+.btn-changelog {
+  background: transparent;
+  border: 1px dashed var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-top: 25px;
+  padding: 8px;
+  transition: all 0.2s;
+}
+
+.btn-changelog:hover {
+  background: var(--bg-ficha-oscuro);
+  color: var(--color-primario);
+  border-style: solid;
+}
+/* --- ADAPTACIÓN MÓVIL --- */
+@media (max-width: 768px) {
+  .home-card {
+    padding: 30px 20px;
+  }
+
+  .home-card h1 {
+    font-size: 2.2rem; 
+  }
+
+  .home-card p {
+    font-size: 0.9rem; 
+    margin-bottom: 25px;
+  }
+
+  .input-home,
+  .btn-home {
+    font-size: 1rem; 
+    padding: 10px;
+  }
+}
+
+/* --- SECCIÓN DE SALAS RECIENTES --- */
+.salas-recientes-container {
+  margin-top: 25px;
+  padding-top: 15px;
+  text-align: left;
+}
+
+.titulo-recientes {
+  color: var(--color-primario);
+  font-size: 0.8rem;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.lista-recientes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-reciente {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.btn-sala-reciente {
+  background: var(--bg-ficha-oscuro);
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  cursor: pointer;
+  flex-grow: 1;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 8px 12px;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.btn-sala-reciente:hover {
+  background: var(--color-primario);
+  border-color: var(--color-primario);
+  color: var(--texto-claro);
+}
+
+.btn-quitar-reciente {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--texto-gris);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 8px;
+  transition: all 0.2s;
+}
+
+.btn-quitar-reciente:hover {
+  color: var(--color-peligro);
+  background: rgba(var(--color-peligro-rgba));
+}
+
+/* --- NUEVOS INPUTS Y PINES --- */
+.inputs-sala-grupo {
+  display: flex;
+  gap: 10px;
+}
+
+.input-nombre-sala {
+  flex-grow: 1;
+}
+
+.input-pin-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 95px; /* Ancho fijo para el PIN de 4 números */
+}
+
+.prefijo-pin {
+  color: var(--color-primario);
+  font-size: 1.2rem;
+  font-weight: 900;
+  left: 12px;
+  position: absolute;
+}
+
+.input-pin-sala {
+  padding-left: 30px; /* Deja espacio para que se vea el prefijo '#' */
+  width: 100%;
+}
+
+.hint-home {
+  color: var(--texto-gris);
+  display: block;
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+  margin-top: -5px;
+  text-align: center;
+}
+
+.header-recientes {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.titulo-recientes {
+  margin: 0;
+}
+
+.btn-toggle-pines {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 0;
+  transition: transform 0.2s;
+}
+
+.btn-toggle-pines:hover {
+  transform: scale(1.1);
+  background: transparent;
+  color: var(--color-primario);
+}
+
+.pin-reciente {
+  color: var(--texto-gris);
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-left: 8px;
+}

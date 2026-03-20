@@ -1,0 +1,94 @@
+.btn-agregar-exp {
+  background: transparent;
+  border: 1px dashed var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 6px;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-agregar-exp:hover {
+  background: var(--bg-ficha-oscuro);
+  color: var(--color-primario);
+}
+
+.btn-del-exp {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--color-peligro);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  justify-content: center;
+  padding: 0 2px;
+  transition: color 0.2s;
+}
+
+.btn-del-exp:hover {
+  background: rgba(var(--color-peligro-rgba));
+  color: var(--texto-claro);
+}
+
+.experiencia-row-vtt {
+  align-items: center;
+  background: var(--texto-claro);
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  box-sizing: border-box; 
+  display: flex;
+  gap: 0px;
+  padding: 6px 10px;
+  position: relative;
+  width: 100%;
+}
+
+.experiencias-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.input-exp-mod {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  width: 22px;
+}
+
+.input-exp-nombre {
+  background-color: transparent;
+  border: none;
+  color: var(--texto-oscuro);
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 0;
+  outline: none;
+}
+
+.modificador-wrapper {
+  align-items: center;
+  background: var(--bg-ficha-oscuro);
+  border-radius: 4px;
+  color: var(--color-primario);
+  display: flex;
+  font-weight: bold;
+  padding: 2px 6px;
+}
+
+.plus-prefix {
+  font-size: 0.9rem;
+}

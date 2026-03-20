@@ -1,0 +1,71 @@
+.btn-fear-ajuste {
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  height: 24px;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s;
+  width: 24px;
+}
+
+.btn-fear-ajuste:hover {
+  background: var(--color-primario);
+  border-color: var(--color-primario);
+  color: var(--texto-claro);
+}
+
+.fear-controls {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.fear-input {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 900;
+  outline: none;
+  text-align: center;
+  width: 45px;
+}
+
+.fear-label {
+  color: var(--color-primario);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.fear-tracker-wrapper {
+  align-items: center;
+  background: var(--color-secundario-rgb);
+  border: 4px solid var(--color-primario);
+  border-radius: 8px;
+ box-shadow: 0 8px 32px rgba(var(--color-sombras-rgba));
+  display: flex;
+  flex-direction: column;
+  padding: 6px 12px;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  z-index: 100;
+}
+/* --- ADAPTACIÓN MÓVIL --- */
+@media (max-width: 768px) {
+  .fear-tracker-wrapper {
+    right: 15px;
+    top: 15px;
+    transform: scale(0.75);
+    transform-origin: top right; 
+  }
+}

@@ -1,0 +1,186 @@
+.vtt-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: #323232;
+  border-right: 3px solid #1b6c72;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  left: -300px;
+  overflow-y: auto;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  width: 300px;
+  z-index: 200;
+}
+
+.sidebar.visible {
+  left: 0;
+  visibility: visible;
+}
+
+.btn-toggle-menu {
+  background: #1b6c72;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  left: 20px;
+  padding: 10px 15px;
+  position: fixed;
+  top: 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 210;
+}
+
+.btn-toggle-menu.abierto {
+  background: #0d3149;
+  left: 310px;
+}
+
+.titulo-tablero {
+  font-size: 2.5rem;
+  font-weight: bold;
+  left: 50%;
+  margin: 0;
+  pointer-events: none;
+  position: fixed;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  top: 15px;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.tablero-main {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  min-width: max-content;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-left: 10px;
+  position: relative;
+  scroll-behavior: smooth;
+  transition: padding-left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tablero-grid {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin-top: 5px;
+  min-height: min-content;
+  padding: 100px 20px 20px 20px; 
+  width: max-content;
+}
+
+.tablero-vacio {
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+.tablero-vacio h1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 90;
+}
+
+.item-fila-boveda {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.btn-nombre-personaje {
+  background: #3d3d3d;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 10px 15px;
+  transition: background 0.2s;
+}
+
+.btn-nombre-personaje:hover {
+  background: #1b6c72;
+}
+
+.btn-add {
+  background: #0d3149;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 25px;
+  padding: 12px 20px;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-add:hover {
+  background: #1b6c72;
+}
+
+.lista-reserva {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nombre-txt {
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clase-txt {
+  color: #a0a0a0;
+  font-size: 0.75rem;
+}
+
+.btn-delete-perm {
+  background: transparent;
+  border: 1px solid #1b6c72;
+  border-radius: 6px;
+  color: #1b6c72;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 8px;
+  transition: all 0.3s;
+}
+
+.btn-delete-perm:hover {
+  background: #0d3149;
+  color: white;
+}

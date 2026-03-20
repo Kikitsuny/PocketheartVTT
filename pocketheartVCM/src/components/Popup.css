@@ -1,0 +1,125 @@
+/* --- OVERLAY DEL POPUP --- */
+.modal-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.modal-content {
+  background: var(--bg-ficha);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(var(--color-sombras-rgba));
+  color: var(--texto-oscuro);
+  max-width: 450px;
+  padding: 30px;
+  text-align: center;
+  width: 90%;
+  animation: popup-aparecer 0.2s ease-out;
+}
+
+@keyframes popup-aparecer {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal-mensaje {
+  margin-bottom: 20px;
+}
+
+/* --- INPUT TEXT --- */
+.input-popup {
+  background: var(--bg-ficha-oscuro);
+  border: 1px solid var(--color-secundario);
+  border-radius: 4px;
+  color: var(--texto-gris);
+  font-size: 1.1rem;
+  margin: 10px 0 20px 0;
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-popup:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  color: var(--texto-oscuro);
+}
+
+/* --- BOTONES --- */
+.modal-botones {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.btn-cancelar {
+  background: var(--color-primario);
+  border-radius: 6px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  flex: 1;
+  font-weight: bold;
+  padding: 12px;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-cancelar:hover {
+  background: var(--color-secundario);
+  color: var(--color-primario);
+}
+
+.btn-confirmar-normal {
+  background: var(--color-secundario);
+  border: none;
+  border-radius: 6px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  flex: 1;
+  font-weight: bold;
+  padding: 12px;
+  transition: all 0.3s;
+}
+
+.btn-confirmar-normal:hover {
+  background: var(--color-primario);
+}
+
+.btn-destruir-final {
+  background: var(--color-peligro);
+  border: none;
+  border-radius: 6px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  flex: 1;
+  font-weight: bold;
+  padding: 12px;
+  transition: all 0.3s;
+}
+
+.btn-destruir-final:disabled {
+  background: var(--bg-ficha-oscuro);
+  color: #888;
+  cursor: not-allowed;
+}
+
+.btn-destruir-final:not(:disabled):hover {
+  background: #ff3333;
+}

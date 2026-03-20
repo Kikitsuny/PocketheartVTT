@@ -1,0 +1,236 @@
+.btn-agregar-carta {
+  background: transparent;
+  border: 1px dashed var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 6px;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-agregar-carta:hover {
+  background: var(--bg-ficha-oscuro);
+  color: var(--color-primario);
+}
+
+.btn-carta-eliminar {
+  background: transparent;
+  border: 1px solid var(--color-peligro);
+  border-radius: 4px;
+  color: var(--color-peligro);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+.btn-carta-eliminar:hover {
+  background: rgba(var(--color-peligro-rgba));
+}
+
+.btn-carta-mover {
+  background: var(--color-primario);
+  border: none;
+  border-radius: 4px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 4px 10px;
+}
+
+.btn-carta-mover:hover {
+  background: var(--color-secundario);
+}
+
+.btn-ver-mazo {
+  background: transparent;
+  border: 1px solid var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 8px;
+}
+.btn-ver-mazo:hover {
+  background: var(--color-secundario);
+  border: 1px solid var(--color-secundario);
+
+}
+.carta-acciones-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+  padding-top: 10px;
+}
+
+.carta-dato-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.carta-fila-caract {
+  display: flex;
+  flex-direction: column;
+}
+
+.carta-flotante {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(var(--color-sombras-rgba));
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 105%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.carta-flotante-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 12px;
+}
+
+.carta-flotante-header {
+  background: var(--color-secundario);
+  color: var(--texto-claro);
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.carta-flotante-header button {
+  background: transparent;
+  border: none;
+  color: var(--texto-claro);
+  cursor: pointer;
+  font-size: 15px;
+  padding: 2px 10px;
+}
+
+.carta-grid-cuatro {
+  display: grid;
+  gap: 12px 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.carta-item-main {
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.2s;
+}
+
+.carta-item-main.activo {
+ background: var(--bg-ficha-oscuro);
+  border-color: var(--color-secundario);
+}
+
+.carta-item-wrapper {
+  position: relative;
+}
+
+.carta-item-wrapper:last-child .carta-flotante {
+  bottom: 105%;
+  top: auto;
+}
+
+.cartas-contador {
+  color: var(--color-primario);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.cartas-header-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+
+.cartas-lista-expandible {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contenedor-cartas {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.input-caract-valor {
+  color: var(--texto-gris);
+  font-size: 0.85rem;
+  font-style: italic;
+  min-height: 40px;
+  resize: vertical;
+}
+
+.input-carta-base {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--texto-gris);
+  color: var(--texto-oscuro);
+  font-family: inherit;
+  outline: none;
+  padding: 2px 0;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.input-carta-base:focus {
+  background: var(--bg-ficha-oscuro);
+  border-bottom: 2px solid var(--color-secundario);
+}
+
+.input-carta-titulo {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-size: 1.1rem;
+  font-weight: 800;
+  outline: none;
+  width: 100%;
+}
+
+.input-dato-valor {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+
+.label-carta-gris {
+  color: var(--texto-gris);
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.mazo-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mazo-vacio {
+  color: var(--texto-gris);
+  font-size: 0.85rem;
+  font-style: italic;
+  text-align: center;
+}

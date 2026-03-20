@@ -1,0 +1,197 @@
+.arma-dato-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.arma-fila-caract {
+  display: flex;
+  flex-direction: column;
+}
+
+.arma-flotante {
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(var(--color-sombras-rgba));
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 105%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.arma-flotante-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 12px;
+}
+
+.arma-flotante-header {
+  background: var(--color-secundario);
+  color: var(--texto-claro);
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.arma-flotante-header button {
+  background: transparent;
+  border: none;
+  color: var(--texto-claro);
+  cursor: pointer;
+  font-size: 15px;
+  padding: 2px 10px;
+}
+
+.arma-grid-datos {
+  display: grid;
+  gap: 12px 15px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.arma-item-main {
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.2s;
+}
+
+.arma-item-main small {
+  color: var(--texto-gris);
+  display: block;
+  font-size: 0.65rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.arma-item-main.activo {
+  background: var(--bg-ficha-oscuro);
+  border-color: var(--color-secundario);
+}
+
+.arma-item-wrapper {
+  position: relative;
+}
+
+.arma-item-wrapper:last-child .arma-flotante {
+  bottom: 105%;
+  top: auto;
+}
+
+.armas-lista-expandible {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.competencia-container-vtt {
+  align-items: center;
+  background: transparent;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -6px;
+  padding: 2px 2px;
+}
+
+.contenedor-armas {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.input-arma-base {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--texto-gris);
+  color: var(--texto-oscuro);
+  font-family: inherit;
+  outline: none;
+  padding: 2px 0;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.input-arma-base:focus {
+  background: var(--bg-ficha-oscuro);
+  border-bottom: 2px solid var(--color-secundario);
+}
+
+.input-arma-titulo {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-size: 1.1rem;
+  font-weight: 800;
+  outline: none;
+  width: 100%;
+}
+
+.input-caract-valor {
+  color: var(--texto-oscuro);
+  font-size: 0.85rem;
+  font-style: italic;
+  min-height: 50px;
+  resize: vertical;
+}
+
+.input-competencia-vtt {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  width: 22px;
+}
+
+.input-dato-valor {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.label-arma-gris {
+  color: var(--texto-gris);
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.label-competencia-vtt {
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.modificador-competencia-wrapper {
+  align-items: center;
+  background: transparent;
+  border-radius: 4px;
+  color: var(--color-primario);
+  display: flex;
+  font-weight: bold;
+  padding: 2px 6px;
+}
+
+.plus-prefix-arma {
+  font-size: 0.9rem;
+}
+
+.separador-armas-vtt {
+  background: var(--color-primario);
+  border: 0;
+  height: 1px;
+  margin: 8px 0;
+}

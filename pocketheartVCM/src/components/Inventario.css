@@ -1,0 +1,227 @@
+.btn-agregar-item {
+  background: transparent;
+  border: 1px dashed var(--color-primario);
+  border-radius: 4px;
+  color: var(--color-primario);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 6px;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-agregar-item:hover {
+  background: var(--bg-ficha-oscuro);
+  color: var(--color-primario);
+}
+
+.btn-inventario-eliminar {
+  background: transparent;
+  border: 1px solid var(--color-peligro);
+  border-radius: 4px;
+  color: var(--color-peligro);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+
+.btn-inventario-eliminar:hover {
+  background: rgba(var(--color-peligro-rgba));
+}
+
+.contenedor-inventario {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dinero-contenedor {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.dinero-grupo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.icono-flecha {
+  color: var(--color-primario);
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.input-dinero {
+  background: var(--bg-ficha-oscuro);
+  border-radius: 6px;
+  border: none;
+  color: var(--color-primario);
+  font-size: 1.2rem;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  width: 50px;
+}
+
+.input-inventario-base {
+  background: transparent;
+  border: 1px solid var(--color-secundario);
+  color: var(--texto-oscuro);
+  font-family: inherit;
+  outline: none;
+  padding: 2px 0;
+  width: 100%;
+}
+
+.input-inventario-detalles {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-style: italic;
+  padding: 6px;
+  resize: vertical;
+}
+
+.input-inventario-titulo {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-size: 1rem;
+  font-weight: 800;
+  outline: none;
+  width: 100%;
+}
+
+.input-notas-expanded {
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+.inventario-acciones-footer {
+  border-top: 1px solid var(--bg-ficha-oscuro);
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  padding-top: 10px;
+}
+
+.inventario-flotante {
+ background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(var(--color-sombras-rgba));
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 105%;
+  width: 100%;
+  z-index: 1000;
+}
+
+.inventario-flotante-contenido {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+
+.inventario-flotante-header {
+  background: var(--color-secundario);
+  color: var(--texto-claro);
+  display: flex;
+  font-size: 1rem;
+  font-weight: bold;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.inventario-flotante-header button {
+  background: transparent;
+  border: none;
+  color: var(--texto-claro);
+  cursor: pointer;
+  font-size: 15px;
+  padding: 2px 10px;
+}
+
+.inventario-item-main {
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.2s;
+}
+
+.inventario-item-main.activo {
+  background: var(--bg-ficha-oscuro);
+  border-color: var(--color-secundario);
+}
+
+.inventario-item-main.notas-main.activo {
+  border-bottom: 2px solid var(--color-primario);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.inventario-item-wrapper {
+  position: relative;
+}
+
+.inventario-item-wrapper:last-child .inventario-flotante {
+  bottom: 105%;
+  top: auto;
+}
+
+.inventario-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inventario-notas-contenido {
+  background: var(--bg-ficha-oscuro);
+  border: 1px solid var(--color-secundario);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.label-dinero {
+  color: var(--color-primario);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.notas-main {
+  justify-content: center;
+  text-align: center;
+}
+
+.notas-wrapper {
+  margin-top: -3px;
+}
+
+.separador-inventario {
+  background: var(--bg-ficha-oscuro);
+  border: 0;
+  height: 1px;
+  margin: 10px;
+}
+
+.titulo-notas {
+  color: var(--color-primario);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}

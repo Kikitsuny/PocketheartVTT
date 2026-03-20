@@ -1,0 +1,218 @@
+.bloque-defensas-manual {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.bloque-recursos-pips {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.campo-manual {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.fila-manual-vtt {
+  background: transparent;
+  border-bottom: 1px solid var(--bg-ficha-oscuro);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.grupo-umbrales {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+}
+
+.input-vtt-limpio {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: bold;
+  outline: none;
+  text-align: center;
+  width: 45px;
+}
+
+.label-manual {
+  color: var(--color-primario);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.pip {
+  background: var(--texto-claro);
+  border: 2px solid var(--color-primario);
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 14px;
+  width: 14px;
+}
+
+.pip.active.pip-armor { background: var(--pip-armadura); }
+.pip.active.pip-hope { background: var(--pip-hope); }
+.pip.active.pip-hp { background: var(--pip-hp); }
+.pip.active.pip-stress { background: var(--pip-estres); }
+
+.pip-controls {
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.pip-controls button {
+  align-items: center;
+  background: var(--color-secundario);
+  border: none;
+  border-radius: 3px;
+  color: var(--texto-claro);
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  height: 18px;
+  justify-content: center;
+  line-height: 1;
+  width: 18px;
+}
+
+.pip-controls button span {
+  margin-left: -1px;
+  margin-top: -1px;
+}
+
+.pips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.resource-header-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.resource-label {
+  color: var(--color-primario);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.resource-row-stack {
+  border-bottom: 1px solid var(--texto-gris);
+  margin-left: 10px;
+  padding: 2px 2px;
+}
+
+.resource-row-stack:hover .pip-controls {
+  opacity: 1;
+}
+
+.separador-vtt {
+  color: var(--color-primario);
+  font-weight: bold;
+}
+
+/* --- ACORDEÓN HABILIDAD ESPERANZA --- */
+.esperanza-item-wrapper {
+  margin: 10px 10px 5px 10px;
+  position: relative;
+}
+
+.esperanza-item-main {
+  background: var(--bg-ficha-oscuro);
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Empuja la flecha a la derecha */
+  align-items: center;
+  padding: 6px 10px;
+  transition: all 0.2s;
+}
+
+.esperanza-item-main.activo {
+  border-bottom: 2px solid var(--color-primario);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Contenedor de los textos para apilarlos */
+.esperanza-header-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* La etiqueta gris pequeña ("HABILIDAD DE ESPERANZA") */
+.esperanza-header-info small {
+  color: var(--texto-gris);
+  display: block;
+  font-size: 0.65rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+/* El input grande en color primario editable */
+.input-esperanza-titulo {
+  background: transparent;
+  border: none;
+  color: var(--color-primario);
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  outline: none;
+  width: 100%;
+}
+
+.icono-flecha-recursos {
+  color: var(--color-primario);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.esperanza-contenido {
+  background: var(--bg-ficha-oscuro);
+  border: 1px solid var(--color-secundario);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: none;
+  padding: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.input-esperanza-detalles {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: var(--texto-oscuro);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-style: italic;
+  outline: none;
+  padding: 4px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-esperanza-detalles:focus {
+  background: var(--bg-ficha-oscuro);
+  border: 1px dashed var(--color-secundario);
+}

@@ -1,0 +1,91 @@
+:root {
+  /* --- COLORES PRINCIPALES --- */
+  --color-peligro-rgba: 204, 36, 29, 0.5;
+  --color-peligro: #c30b45;
+  --color-primario-rgb: 51, 40, 97;
+  --color-primario: #332861;
+  --color-secundario: #b69a34;
+  --color-secundario-rgb: rgba(182, 154, 52, 0.8);
+  --color-sombras-rgba: 0, 0,  0, 0.9;
+  
+  /* --- TEXTO (Simplificado a 3) --- */
+  --texto-claro: #ffffff;
+  --texto-gris: #6a6a6a;
+  --texto-oscuro: #111111;
+  
+  /* --- FONDOS BASE --- */
+ --bg-ficha-claro: #ffffff;
+  --bg-ficha: #a1a7bd;
+  --bg-ficha-oscuro: #cfd3e1;
+
+  /* --- PIPS DE RECURSOS --- */
+  --pip-armadura: #928374;
+  --pip-estres: #458588;
+  --pip-hope: #fabd2f;
+  --pip-hp: #d8324b;
+
+  /* --- TIPOGRAFÍA (Simplificada a 2) --- */
+  --fuente-principal: system-ui, Arial;
+  --fuente-titulos: Arial;
+
+  /* --- CONFIGURACIÓN BASE DEL NAVEGADOR --- */
+  background-attachment: fixed; 
+  background-color: #1a1a1a;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url('./assets/BG-Clouds4.jpg'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--texto-claro);
+  color-scheme: dark;
+  font-family: var(--fuente-principal);
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding: 0;
+}
+
+h1 { 
+  font-family: var(--fuente-titulos);
+  font-size: 3.2em; 
+  line-height: 1.1; 
+}
+
+/* --- BOTONES GLOBALES OPTIMIZADOS --- */
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--fuente-principal);
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.6em 1.2em;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover { 
+  background-color: var(--color-secundario); 
+  color: var(--texto-claro);
+}
+
+/* --- INPUTS NUMÉRICOS GLOBALES (Elimina flechas en todo el proyecto) --- */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-supabaseClient.js
+src/supabaseClient.js
 
 # Editor directories and files
 .vscode/*
